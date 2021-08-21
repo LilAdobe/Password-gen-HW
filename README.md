@@ -7,5 +7,8 @@
 
 ## Links
 
+1. [Homework Deployed Link] (https://liladobe.github.io/Password-gen-HW/)
+2. [Github] (https://github.com/LilAdobe/Password-gen-HW)
+
 ## Screenshot
 <img src="assets/screenshotbefore.png" width="400px">

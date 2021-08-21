@@ -14,39 +14,40 @@ function generatePassword() {
   var length = 11;
   var password = "";
   var possible = "";
-   
+  
 
   hasLowerCase = confirm('Lower?');
   hasUpperCase = confirm('Upper?');
   hasNumeric = confirm('Numeric?');
-  hasSpecial = confirm('Special?')
+  hasSpecial = confirm('Special?');
 
+  var random = Math.floor(Math.random() * letters.length);
+  var random = Math.floor(Math.random() * uppercase.length);
+  var random = Math.floor(Math.random() * numeric.length);
+  var random = Math.floor(Math.random() * special.length);
 
-  // if (hasLowerCase){ dataType.push(lowercase); } if (upperCase) {dataType.push(uppercase);} if (numeric) { dataType.push(numeric);} if (se)
+  // Self reminder- find way to make things less repetative
 
   if (hasLowerCase) {
-    var random = Math.floor(Math.random() * letters.length);
-    var selected = letters[random];
     possible = possible.concat(letters);
     stored.push(selected);
   }
 
   if (hasUpperCase) {
-    var random = Math.floor(Math.random() * uppercase.length);
     var selected = uppercase[random];
     possible = possible.concat(letters);
     stored.push(selected);
   }
 
   if (hasNumeric) {
-    var random = Math.floor(Math.random() * numeric.length);
+    
     var selected = numeric[random];
     possible = possible.concat(numeric);
     stored.push(selected);
   }
 
   if (hasSpecial) {
-    var random = Math.floor(Math.random() * special.length);
+    
     var selected = special[random];
     possible = possible.concat(special);
     stored.push(selected);
@@ -62,9 +63,6 @@ function generatePassword() {
 
   password += stored.join('');
 
-  console.log('POSSIBLE;', possible);
-  console.log('PASSWORD;', password);
-  console.log('STORED;', stored);
   stored = [];
 
   return password;
@@ -72,7 +70,7 @@ function generatePassword() {
 }
 var generateBtn = document.querySelector("#generate")
 
-// Write password to the #password input
+// Write password to the #password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
