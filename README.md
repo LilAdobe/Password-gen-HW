@@ -8,4 +8,4 @@
 ## Links
 
 ## Screenshot
-<img src="assets/screenshotbefore.png">
+<img src="assets/screenshotbefore.png" width="400px">
